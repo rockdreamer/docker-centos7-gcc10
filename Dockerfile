@@ -72,8 +72,8 @@ RUN curl -SL https://yum.oracle.com/RPM-GPG-KEY-oracle-ol7 > /etc/pki/rpm-gpg/RP
     && make install \
     && popd \
     && rm -rf /tmp/automake-1.16* \
-    && wget -O /tmp/cmake-3.19.7-Linux-x86_64.sh --no-check-certificate --quiet 'https://cmake.org/files/v3.19/cmake-3.19.7-Linux-x86_64.sh' \
-    && bash /tmp/cmake-3.19.7-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
-    && rm /tmp/cmake-3.19.7-Linux-x86_64.sh \
+    && wget -O /tmp/cmake-3.21.4-Linux-x86_64.sh --no-check-certificate --quiet 'https://cmake.org/files/v3.21/cmake-3.21.4-Linux-x86_64.sh' \
+    && bash /tmp/cmake-3.21.4-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
+    && rm /tmp/cmake-3.21.4-Linux-x86_64.sh \
     && pip install -q --upgrade --no-cache-dir pip \
     && pip install --no-cache-dir 'conan>=1.34.1,<2.0' conan_package_tools
