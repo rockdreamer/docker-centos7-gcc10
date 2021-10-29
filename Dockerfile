@@ -72,7 +72,7 @@ RUN curl -SL https://yum.oracle.com/RPM-GPG-KEY-oracle-ol7 > /etc/pki/rpm-gpg/RP
     && make install \
     && popd \
     && rm -rf /tmp/automake-1.16* \
-    && wget -O /tmp/cmake-3.21.4-Linux-x86_64.sh --no-check-certificate --quiet 'https://cmake.org/files/v3.21/cmake-3.21.4-Linux-x86_64.sh' \
+    && wget -O /tmp/cmake-3.21.4-Linux-x86_64.sh --no-check-certificate --quiet 'https://github.com/Kitware/CMake/releases/download/v3.21.4/cmake-3.21.4-linux-x86_64.sh' \
     && bash /tmp/cmake-3.21.4-Linux-x86_64.sh --prefix=/usr/local --exclude-subdir \
     && rm /tmp/cmake-3.21.4-Linux-x86_64.sh \
     && pip install -q --upgrade --no-cache-dir pip \
